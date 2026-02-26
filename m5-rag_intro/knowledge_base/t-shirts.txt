@@ -1,0 +1,20 @@
+STORE: Urban Fashion
+
+ABOUT:
+We sell trendy cotton t-shirts for daily wear.
+
+TYPES:
+- Oversized t-shirts
+- Printed t-shirts
+- Plain t-shirts
+- Sports t-shirts
+
+SIZES:
+S, M, L, XL, XXL
+
+CARE:
+Wash in cold water.
+Do not bleach.
+
+DELIVERY:
+3-6 days

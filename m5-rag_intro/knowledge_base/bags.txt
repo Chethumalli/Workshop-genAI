@@ -1,0 +1,17 @@
+STORE: Urban Bags
+
+ABOUT:
+We sell backpacks and travel bags.
+
+TYPES:
+- School bags
+- Laptop bags
+- Travel backpacks
+- Gym bags
+
+FEATURES:
+Water-resistant material
+Multiple compartments
+
+DELIVERY:
+4-7 days

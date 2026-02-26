@@ -1,0 +1,22 @@
+STORE: Urban Sneaker Store
+
+ABOUT:
+We sell stylish and comfortable sneakers for men and women.
+
+PRODUCT TYPES:
+- High-top sneakers
+- Low-top sneakers
+- Running shoes
+- Casual shoes
+
+SIZES:
+UK 6 to UK 11
+
+DELIVERY:
+3-5 business days
+
+RETURN:
+7-day return if unused.
+
+PAYMENT:
+UPI, Card, Cash on Delivery

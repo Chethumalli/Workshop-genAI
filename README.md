@@ -1,158 +1,209 @@
-# 🚀 Workshop-genAI  
+# 🚀 Workshop-genAI
 
-![Python](https://img.shields.io/badge/Python-3.10+-blue?style=for-the-badge&logo=python)
-![FastAPI](https://img.shields.io/badge/FastAPI-Backend-green?style=for-the-badge&logo=fastapi)
-![LLM](https://img.shields.io/badge/LLM-Groq%20%7C%20OpenAI-orange?style=for-the-badge)
-![Status](https://img.shields.io/badge/Status-Active-success?style=for-the-badge)
+A hands-on Generative AI Workshop project demonstrating how to build real-world LLM applications using FastAPI, Groq/OpenAI APIs, and structured AI pipelines.
 
 ---
 
-## 📌 About The Project  
+## 📌 Overview
 
-**Workshop-genAI** is a hands-on implementation repository built during a Generative AI Workshop.  
+Workshop-genAI is a practical implementation project designed to teach:
 
-This project demonstrates how to integrate **Large Language Models (LLMs)** into real-world backend systems using **FastAPI** and modern AI APIs like **Groq** and **OpenAI**.
+- Large Language Model (LLM) integration
+- Prompt engineering
+- FastAPI backend development
+- Modular AI architecture
+- Retrieval-Augmented Generation (RAG)
+- AI evaluation techniques
 
-> 🎯 Goal: Learn how modern AI applications like ChatGPT are built — and build one yourself.
-
----
-
-## 🧠 What This Project Covers  
-
-- 🤖 Understanding Large Language Models (LLMs)  
-- ⚡ FastAPI backend development  
-- 🔥 Groq / OpenAI API integration  
-- 🧠 Prompt engineering basics  
-- 🛠 Building AI-powered applications  
+This repository is structured as workshop modules, each building on the previous one.
 
 ---
 
-## 🛠 Tech Stack  
+## 🧠 Workshop Modules
 
-| Technology       | Purpose                      |
-|------------------|-----------------------------|
-| 🐍 Python        | Core programming             |
-| ⚡ FastAPI       | Backend API framework        |
-| 🧠 Groq / OpenAI | LLM integration              |
-| 🔗 REST APIs     | Communication layer          |
-| 🖥 VS Code        | Development environment      |
+### 📦 Module 1 – AI Concept Explainer
+- Prompt-based system
+- Multiple explanation modes (Shakespeare, Pirate, Bandit)
+- Demonstrates system + user prompt control
+
+### 📦 Module 2 – Structured Answer Generator
+- FastAPI application
+- Returns structured JSON responses
+- Basic LLM integration
+
+### 📦 Module 3 – LLM Application Architecture
+- Clean layered architecture
+- input_layer.py
+- prompt_layer.py
+- llm_layer.py
+- post_processing.py
+- pipeline.py
+- Separation of concerns (real-world AI system design)
+
+### 📦 Module 4 – Evaluation System
+- Output validation
+- Structured scoring
+- Basic AI response evaluation methods
+
+### 📦 Module 5 – RAG (Retrieval-Augmented Generation)
+- Keyword-based retrieval
+- knowledge_base/ folder
+- retriever.py
+- rag_pipeline.py
+- LiteLLM integration
+- CLI-based interactive Q&A
 
 ---
 
-## 📂 Project Structure  
+## 🛠️ Tech Stack
 
-```bash
+- Python
+- FastAPI
+- Groq API
+- OpenAI API
+- LiteLLM
+- Uvicorn
+- VS Code
+
+---
+
+## 📁 Project Structure
+
+```
 Workshop-genAI/
 │
-├── app.py              # Main FastAPI application
-├── requirements.txt    # Project dependencies
-├── README.md           # Documentation
-└── .env                # API keys (not included in repo)
+├── m1-ai-concept-explainer/
+├── m2-structured_ans_generator/
+├── m3-architecture/
+├── m4-evalution/
+├── m5-rag/
+│   ├── knowledge_base/
+│   ├── retriever.py
+│   ├── llm_layer.py
+│   ├── rag_pipeline.py
+│   └── main.py
+│
+├── requirements.txt
+└── README.md
 ```
 
 ---
 
-## ⚙️ Installation & Setup  
+## ⚙️ Installation Guide
 
-### 1️⃣ Clone the Repository  
+### 1️⃣ Clone the Repository
 
-```bash
+```
 git clone https://github.com/Chethumalli/Workshop-genAI.git
 cd Workshop-genAI
 ```
 
-### 2️⃣ Create Virtual Environment  
+### 2️⃣ Create Virtual Environment
 
-```bash
+Windows:
+```
 python -m venv venv
-venv\Scripts\activate   # Windows
+venv\Scripts\activate
 ```
 
-For macOS/Linux:
-
-```bash
+Mac/Linux:
+```
+python3 -m venv venv
 source venv/bin/activate
 ```
 
-### 3️⃣ Install Dependencies  
+### 3️⃣ Install Dependencies
 
-```bash
+```
 pip install -r requirements.txt
 ```
 
-### 4️⃣ Add API Key  
+### 4️⃣ Setup Environment Variables
 
-Create a `.env` file in the root directory:
+Create a `.env` file in root directory:
 
-```env
-GROQ_API_KEY=your_api_key_here
+```
+GROQ_API_KEY=your_groq_api_key_here
+OPENAI_API_KEY=your_openai_api_key_here
 ```
 
-(or use `OPENAI_API_KEY` if using OpenAI)
+---
 
-### 5️⃣ Run the Application  
+## ▶️ Running Applications
 
-```bash
+### For FastAPI modules:
+
+```
 uvicorn app:app --reload
 ```
 
-Now open:
+Open:
+- http://127.0.0.1:8000
+- http://127.0.0.1:8000/docs
+
+### For RAG CLI module:
 
 ```
-http://127.0.0.1:8000
-```
-
-Swagger API documentation:
-
-```
-http://127.0.0.1:8000/docs
+python main.py
 ```
 
 ---
 
-## 🔄 How It Works  
+## 🔍 How It Works
 
-1. User sends a prompt  
-2. FastAPI backend receives the request  
-3. Backend calls Groq/OpenAI API  
-4. LLM generates response  
-5. API returns structured JSON response  
+1. User enters prompt
+2. Input layer validates data
+3. Prompt layer constructs structured prompt
+4. LLM layer calls Groq/OpenAI
+5. Post-processing formats output
+6. Final structured response is returned
 
-This is the same architecture used in modern AI applications.
-
----
-
-## 🔮 Future Enhancements  
-
-- 🌐 Cloud deployment (AWS / Render / Railway)  
-- 💬 Frontend UI integration  
-- 🔐 Authentication system  
-- 📊 Logging & analytics  
-- 🐳 Docker support  
-- 🧠 Fine-tuned models  
+For RAG:
+1. Query entered
+2. Retriever searches knowledge base
+3. Retrieved context injected into prompt
+4. LLM generates context-aware answer
 
 ---
 
-## 🤝 Contributing  
+## 🚀 Key Learnings
 
-Contributions are welcome!
-
-1. Fork the repository  
-2. Create a feature branch  
-3. Commit your changes  
-4. Push to GitHub  
-5. Open a Pull Request  
+- Prompt engineering controls output
+- Architecture matters in AI systems
+- RAG improves factual accuracy
+- Modular design makes AI scalable
+- Clean separation of layers prevents chaos
 
 ---
 
-## 👨‍💻 Author  
+## 🌟 Future Improvements
 
-**Chethan Malli**  
+- Vector database integration (FAISS / Pinecone)
+- Docker support
+- Frontend UI
+- Cloud deployment
+- Streaming responses
+- Authentication system
+- Fine-tuned custom models
+
+---
+
+## 🤝 Contribution
+
+1. Fork the repository
+2. Create feature branch
+3. Commit changes
+4. Push branch
+5. Open Pull Request
+
+---
+
+## 👨‍💻 Author
+
+Chethan Malli  
 AI & ML Enthusiast  
-Building AI-powered systems  
-
-GitHub: https://github.com/Chethumalli  
+GitHub: https://github.com/Chethumalli
 
 ---
 
-⭐ If you found this project useful, consider giving it a star!
+⭐ If this workshop helped you, please star the repository!

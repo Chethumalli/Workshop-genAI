@@ -42,4 +42,91 @@ The goal is simple:
 ---
 
 ## 📂 Project Structure  
+Workshop-genAI/
+│
+├── app.py # Main FastAPI application
+├── requirements.txt # Project dependencies
+├── README.md # Documentation
+└── .env # API keys (not included in repo)
 
+
+---
+
+## ⚙️ Installation & Setup  
+
+### 1️⃣ Clone the Repository  
+
+```bash
+git clone https://github.com/Chethumalli/Workshop-genAI.git
+cd Workshop-genAI
+
+2️⃣ Create Virtual Environment
+python -m venv venv
+venv\Scripts\activate  
+
+3️⃣ Install Dependencies
+pip install -r requirements.txt
+
+4️⃣ Add API Key
+
+Create a .env file in the root directory:
+GROQ_API_KEY=your_api_key_here
+(or use OPENAI_API_KEY if using OpenAI)
+
+5️⃣ Run the Application
+uvicorn app:app --reload
+
+Now open:
+http://127.0.0.1:8000
+Swagger API documentation:
+http://127.0.0.1:8000/docs
+
+🔄 How It Works
+
+User sends a prompt
+
+FastAPI backend receives the request
+
+Backend calls Groq/OpenAI API
+
+LLM generates response
+
+API returns structured JSON response
+
+This is the same architectural flow used in modern AI applications.
+
+🔮 Future Enhancements
+
+🌐 Cloud deployment (AWS / Render / Railway)
+
+💬 Frontend UI integration
+
+🔐 Authentication system
+
+📊 Logging & analytics
+
+🐳 Docker support
+
+🧠 Fine-tuned models
+
+🤝 Contributing
+
+Contributions are welcome!
+
+Fork the repository
+
+Create a feature branch
+
+Commit your changes
+
+Push to GitHub
+
+Open a Pull Request
+
+👨‍💻 Author
+
+Chethan Malli
+AI & ML Enthusiast
+Building AI-powered systems
+
+GitHub: https://github.com/Chethumalli

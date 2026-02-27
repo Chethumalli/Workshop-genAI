@@ -1,73 +1,202 @@
 # 🚀 Workshop-genAI
 
-A hands-on Generative AI Workshop project demonstrating how to build real-world LLM applications using FastAPI, Groq/OpenAI APIs, and structured AI pipelines.
+> A Complete Hands-On Generative AI Workshop  
+> Learn how to build production-ready LLM applications step-by-step.
 
 ---
 
-## 📌 Overview
+## 🌟 About This Repository
 
-Workshop-genAI is a practical implementation project designed to teach:
+**Workshop-genAI** is a structured, module-based learning repository designed to teach how modern AI systems (like ChatGPT) are built in real-world architecture.
 
-- Large Language Model (LLM) integration
-- Prompt engineering
-- FastAPI backend development
-- Modular AI architecture
-- Retrieval-Augmented Generation (RAG)
-- AI evaluation techniques
+Instead of just calling an API, this workshop focuses on:
 
-This repository is structured as workshop modules, each building on the previous one.
+- 🧠 Prompt Engineering
+- 🏗 Clean AI System Architecture
+- 📊 Evaluation & Validation
+- 📚 Retrieval-Augmented Generation (RAG)
+- 🤖 AI Agents & Multi-Step Reasoning
+- ⚙️ FastAPI Backend Integration
 
----
-
-## 🧠 Workshop Modules
-
-### 📦 Module 1 – AI Concept Explainer
-- Prompt-based system
-- Multiple explanation modes (Shakespeare, Pirate, Bandit)
-- Demonstrates system + user prompt control
-
-### 📦 Module 2 – Structured Answer Generator
-- FastAPI application
-- Returns structured JSON responses
-- Basic LLM integration
-
-### 📦 Module 3 – LLM Application Architecture
-- Clean layered architecture
-- input_layer.py
-- prompt_layer.py
-- llm_layer.py
-- post_processing.py
-- pipeline.py
-- Separation of concerns (real-world AI system design)
-
-### 📦 Module 4 – Evaluation System
-- Output validation
-- Structured scoring
-- Basic AI response evaluation methods
-
-### 📦 Module 5 – RAG (Retrieval-Augmented Generation)
-- Keyword-based retrieval
-- knowledge_base/ folder
-- retriever.py
-- rag_pipeline.py
-- LiteLLM integration
-- CLI-based interactive Q&A
+This is not just theory — it’s implementation-focused.
 
 ---
 
-## 🛠️ Tech Stack
-
-- Python
-- FastAPI
-- Groq API
-- OpenAI API
-- LiteLLM
-- Uvicorn
-- VS Code
+# 📦 Workshop Modules
 
 ---
 
-## 📁 Project Structure
+## 🧩 Module 1 — AI Concept Explainer
+
+### 🎯 Goal:
+Understand how prompt engineering controls AI behavior.
+
+### Features:
+- System Prompt + User Prompt separation
+- Multiple explanation styles:
+  - Shakespeare Mode
+  - Pirate Mode
+  - Bandit Mode
+- Dynamic response control
+
+### Key Learning:
+Prompt engineering directly influences structure, tone, and complexity.
+
+---
+
+## 🧩 Module 2 — Structured Answer Generator
+
+### 🎯 Goal:
+Build a real FastAPI app integrated with an LLM.
+
+### Features:
+- FastAPI backend
+- Structured JSON output
+- API endpoint handling
+- Swagger documentation support
+
+### Example Output:
+```json
+{
+  "topic": "Neural Networks",
+  "definition": "...",
+  "applications": ["..."],
+  "advantages": ["..."]
+}
+```
+
+---
+
+## 🧩 Module 3 — LLM Application Architecture
+
+### 🎯 Goal:
+Design a scalable AI system using clean software engineering principles.
+
+### Architecture Layers:
+
+```
+User Input
+   ↓
+Input Layer
+   ↓
+Prompt Layer
+   ↓
+LLM Layer
+   ↓
+Post Processing
+   ↓
+Final Output
+```
+
+### Files:
+- `input_layer.py`
+- `prompt_layer.py`
+- `llm_layer.py`
+- `post_processing.py`
+- `pipeline.py`
+
+### Key Learning:
+Real AI systems require modular separation of concerns.
+
+---
+
+## 🧩 Module 4 — Evaluation System
+
+### 🎯 Goal:
+Evaluate AI outputs for correctness and structure.
+
+### Features:
+- Structured validation
+- Output scoring
+- Quality metrics
+- Automated evaluation logic
+
+### Why It Matters:
+AI systems must be measured — not blindly trusted.
+
+---
+
+## 🧩 Module 5 — Retrieval-Augmented Generation (RAG)
+
+### 🎯 Goal:
+Improve AI accuracy using external knowledge.
+
+### How It Works:
+
+```
+User Query
+   ↓
+Keyword Retrieval
+   ↓
+Relevant Documents
+   ↓
+Context Injection
+   ↓
+LLM Generates Context-Aware Response
+```
+
+### Components:
+- `knowledge_base/`
+- `retriever.py`
+- `llm_layer.py`
+- `rag_pipeline.py`
+- `main.py`
+
+### Key Learning:
+RAG reduces hallucination and increases factual accuracy.
+
+---
+
+## 🧩 Module 6 — AI Agents & Automation Thinking
+
+### 🎯 Goal:
+Build a multi-step AI Agent with tool orchestration.
+
+### Mini Project:
+### 📄 Resume Review AI Agent
+
+Workflow:
+
+```
+User Input (Resume + Job Description)
+        ↓
+Step 1: Extract Skills (Tool)
+        ↓
+Step 2: Compare Skills (Tool)
+        ↓
+Step 3: Suggest Improvements (LLM)
+        ↓
+Step 4: Score Resume (LLM)
+        ↓
+Final Structured Report
+```
+
+### Files:
+- `tools.py`
+- `agent_brain.py`
+- `llm_layer.py`
+- `main.py`
+
+### Key Learning:
+AI Agents break large problems into smaller logical steps.
+
+---
+
+# 🛠 Tech Stack
+
+| Technology | Purpose |
+|------------|----------|
+| Python | Core Language |
+| FastAPI | Backend API Framework |
+| Groq API | High-speed LLM Inference |
+| OpenAI API | Model Access |
+| LiteLLM | Unified LLM Interface |
+| Uvicorn | ASGI Server |
+| CLI | Interactive Interface |
+
+---
+
+# 📁 Full Project Structure
 
 ```
 Workshop-genAI/
@@ -75,12 +204,17 @@ Workshop-genAI/
 ├── m1-ai-concept-explainer/
 ├── m2-structured_ans_generator/
 ├── m3-architecture/
-├── m4-evalution/
+├── m4-evaluation/
 ├── m5-rag/
 │   ├── knowledge_base/
 │   ├── retriever.py
-│   ├── llm_layer.py
 │   ├── rag_pipeline.py
+│   └── main.py
+│
+├── m6-agents/
+│   ├── tools.py
+│   ├── agent_brain.py
+│   ├── llm_layer.py
 │   └── main.py
 │
 ├── requirements.txt
@@ -89,121 +223,146 @@ Workshop-genAI/
 
 ---
 
-## ⚙️ Installation Guide
+# ⚙️ Installation Guide
 
-### 1️⃣ Clone the Repository
+## 1️⃣ Clone Repository
 
-```
+```bash
 git clone https://github.com/Chethumalli/Workshop-genAI.git
 cd Workshop-genAI
 ```
 
-### 2️⃣ Create Virtual Environment
+## 2️⃣ Create Virtual Environment
 
-Windows:
-```
+### Windows
+```bash
 python -m venv venv
 venv\Scripts\activate
 ```
 
-Mac/Linux:
-```
+### Mac/Linux
+```bash
 python3 -m venv venv
 source venv/bin/activate
 ```
 
-### 3️⃣ Install Dependencies
+## 3️⃣ Install Dependencies
 
-```
+```bash
 pip install -r requirements.txt
 ```
 
-### 4️⃣ Setup Environment Variables
+## 4️⃣ Setup Environment Variables
 
-Create a `.env` file in root directory:
+Create `.env` file:
 
 ```
-GROQ_API_KEY=your_groq_api_key_here
-OPENAI_API_KEY=your_openai_api_key_here
+GROQ_API_KEY=your_groq_key
+OPENAI_API_KEY=your_openai_key
 ```
 
 ---
 
-## ▶️ Running Applications
+# ▶️ Running The Modules
 
-### For FastAPI modules:
+## FastAPI Modules
 
-```
+```bash
 uvicorn app:app --reload
 ```
 
-Open:
+Visit:
 - http://127.0.0.1:8000
 - http://127.0.0.1:8000/docs
 
-### For RAG CLI module:
+---
 
-```
+## RAG Module
+
+```bash
+cd m5-rag
 python main.py
 ```
 
 ---
 
-## 🔍 How It Works
+## Agents Module
 
-1. User enters prompt
-2. Input layer validates data
-3. Prompt layer constructs structured prompt
-4. LLM layer calls Groq/OpenAI
-5. Post-processing formats output
-6. Final structured response is returned
-
-For RAG:
-1. Query entered
-2. Retriever searches knowledge base
-3. Retrieved context injected into prompt
-4. LLM generates context-aware answer
+```bash
+cd m6-agents
+python main.py
+```
 
 ---
 
-## 🚀 Key Learnings
+# 🔬 Core Concepts Covered
 
-- Prompt engineering controls output
-- Architecture matters in AI systems
-- RAG improves factual accuracy
-- Modular design makes AI scalable
-- Clean separation of layers prevents chaos
-
----
-
-## 🌟 Future Improvements
-
-- Vector database integration (FAISS / Pinecone)
-- Docker support
-- Frontend UI
-- Cloud deployment
-- Streaming responses
-- Authentication system
-- Fine-tuned custom models
+- Prompt Engineering
+- Structured JSON Generation
+- API Integration
+- Layered AI Architecture
+- Evaluation Pipelines
+- Retrieval Systems
+- Agent-Based Systems
+- Multi-Step Reasoning
+- Tool Orchestration
 
 ---
 
-## 🤝 Contribution
+# 🚀 Why This Repository Is Valuable
 
-1. Fork the repository
-2. Create feature branch
-3. Commit changes
-4. Push branch
-5. Open Pull Request
+This workshop simulates how real AI startups build systems:
+
+✔ Modular  
+✔ Scalable  
+✔ Structured  
+✔ Measurable  
+✔ Production-Oriented  
+
+It moves beyond simple API calls into system design thinking.
 
 ---
 
-## 👨‍💻 Author
+# 📈 Future Roadmap
 
-Chethan Malli  
+- 🔗 Vector Database Integration (FAISS / Pinecone)
+- 🐳 Docker Support
+- 🌐 Frontend UI Integration
+- ☁ Cloud Deployment
+- ⚡ Streaming LLM Responses
+- 📊 Agent Performance Benchmarking
+- 🔒 Authentication Layer
+
+---
+
+# 🤝 Contributing
+
+1. Fork the repo  
+2. Create feature branch  
+3. Commit changes  
+4. Push to GitHub  
+5. Open Pull Request  
+
+---
+
+# 👨‍💻 Author
+
+**Chethan Malli**  
 AI & ML Enthusiast  
+Building real-world AI systems 🚀  
+
 GitHub: https://github.com/Chethumalli
 
 ---
 
-⭐ If this workshop helped you, please star the repository!
+# ⭐ Support
+
+If this workshop helped you:
+
+👉 Star the repository  
+👉 Share with friends  
+👉 Build something amazing  
+
+---
+
+**Workshop-genAI — From Prompt to Production.**

@@ -13,9 +13,7 @@
 
 This project demonstrates how to integrate **Large Language Models (LLMs)** into real-world backend systems using **FastAPI** and modern AI APIs like **Groq** and **OpenAI**.
 
-The goal is simple:
-
-> 🎯 Learn how modern AI applications like ChatGPT are built — and build one yourself.
+> 🎯 Goal: Learn how modern AI applications like ChatGPT are built — and build one yourself.
 
 ---
 
@@ -42,13 +40,15 @@ The goal is simple:
 ---
 
 ## 📂 Project Structure  
+
+```bash
 Workshop-genAI/
 │
-├── app.py # Main FastAPI application
-├── requirements.txt # Project dependencies
-├── README.md # Documentation
-└── .env # API keys (not included in repo)
-
+├── app.py              # Main FastAPI application
+├── requirements.txt    # Project dependencies
+├── README.md           # Documentation
+└── .env                # API keys (not included in repo)
+```
 
 ---
 
@@ -59,74 +59,100 @@ Workshop-genAI/
 ```bash
 git clone https://github.com/Chethumalli/Workshop-genAI.git
 cd Workshop-genAI
+```
 
-2️⃣ Create Virtual Environment
+### 2️⃣ Create Virtual Environment  
+
+```bash
 python -m venv venv
-venv\Scripts\activate  
+venv\Scripts\activate   # Windows
+```
 
-3️⃣ Install Dependencies
+For macOS/Linux:
+
+```bash
+source venv/bin/activate
+```
+
+### 3️⃣ Install Dependencies  
+
+```bash
 pip install -r requirements.txt
+```
 
-4️⃣ Add API Key
+### 4️⃣ Add API Key  
 
-Create a .env file in the root directory:
+Create a `.env` file in the root directory:
+
+```env
 GROQ_API_KEY=your_api_key_here
-(or use OPENAI_API_KEY if using OpenAI)
+```
 
-5️⃣ Run the Application
+(or use `OPENAI_API_KEY` if using OpenAI)
+
+### 5️⃣ Run the Application  
+
+```bash
 uvicorn app:app --reload
+```
 
 Now open:
+
+```
 http://127.0.0.1:8000
+```
+
 Swagger API documentation:
+
+```
 http://127.0.0.1:8000/docs
+```
 
-🔄 How It Works
+---
 
-User sends a prompt
+## 🔄 How It Works  
 
-FastAPI backend receives the request
+1. User sends a prompt  
+2. FastAPI backend receives the request  
+3. Backend calls Groq/OpenAI API  
+4. LLM generates response  
+5. API returns structured JSON response  
 
-Backend calls Groq/OpenAI API
+This is the same architecture used in modern AI applications.
 
-LLM generates response
+---
 
-API returns structured JSON response
+## 🔮 Future Enhancements  
 
-This is the same architectural flow used in modern AI applications.
+- 🌐 Cloud deployment (AWS / Render / Railway)  
+- 💬 Frontend UI integration  
+- 🔐 Authentication system  
+- 📊 Logging & analytics  
+- 🐳 Docker support  
+- 🧠 Fine-tuned models  
 
-🔮 Future Enhancements
+---
 
-🌐 Cloud deployment (AWS / Render / Railway)
-
-💬 Frontend UI integration
-
-🔐 Authentication system
-
-📊 Logging & analytics
-
-🐳 Docker support
-
-🧠 Fine-tuned models
-
-🤝 Contributing
+## 🤝 Contributing  
 
 Contributions are welcome!
 
-Fork the repository
+1. Fork the repository  
+2. Create a feature branch  
+3. Commit your changes  
+4. Push to GitHub  
+5. Open a Pull Request  
 
-Create a feature branch
+---
 
-Commit your changes
+## 👨‍💻 Author  
 
-Push to GitHub
+**Chethan Malli**  
+AI & ML Enthusiast  
+Building AI-powered systems  
 
-Open a Pull Request
+GitHub: https://github.com/Chethumalli  
 
-👨‍💻 Author
+---
 
-Chethan Malli
-AI & ML Enthusiast
-Building AI-powered systems
-
-GitHub: https://github.com/Chethumalli
+⭐ If you found this project useful, consider giving it a star!
